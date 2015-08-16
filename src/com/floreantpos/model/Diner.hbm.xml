@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15/08/2015 08:56:39 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping package="com.floreantpos.model">
+    <class lazy="false" name="com.floreantpos.model.Diner" table="DINER">
+        <id name="id" type="int">
+            <column name="ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="idDinerType" type="int">
+            <column name="ID_DINER_TYPE" not-null="true" />
+        </property>
+        <property name="idAccount" type="int">
+            <column name="ID_ACCOUNT" not-null="true" />
+        </property>
+        <property name="name" type="string">
+            <column name="NAME" length="45" />
+        </property>
+        <property name="middleName" type="string">
+            <column name="MIDDLE_NAME" length="45" />
+        </property>
+        <property name="lastName" type="string">
+            <column name="LAST_NAME" length="45" />
+        </property>
+        <property name="employeeNumber" type="string">
+            <column name="EMPLOYEE_NUMBER" length="45" />
+        </property>
+        <property name="email" type="string">
+            <column name="EMAIL" length="45" />
+        </property>
+        <property name="nip" type="java.lang.Integer">
+            <column name="NIP" />
+        </property>
+        <property name="isEnabled" type="java.lang.Byte">
+            <column name="IS_ENABLED" />
+        </property>
+        <property name="enabledFrom" type="timestamp">
+            <column name="ENABLED_FROM" length="19" />
+        </property>
+        <property name="enabledTo" type="timestamp">
+            <column name="ENABLED_TO" length="19" />
+        </property>
+        <property name="cardNumber" type="string">
+            <column name="CARD_NUMBER" length="45" />
+        </property>
+        
+         <!-- Associations 
+        <many-to-one class="Shift" column="SHIFT_ID" name="currentShift"/>
+        <many-to-one class="Terminal" name="currentTerminal"/>
+        <many-to-one class="UserType" column="N_USER_TYPE" name="type"/>
+        -->
+    </class>
+</hibernate-mapping>
+
+

@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15/08/2015 08:56:39 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping  package="com.floreantpos.model">
+    <class lazy="false" name="com.floreantpos.model.AccountMovement" table="ACCOUNT_MOVEMENT">
+        <id name="id" type="java.lang.Integer">
+            <column name="ID" />
+            <generator class="identity" />
+        </id>
+        <property name="idAccount" type="int">
+            <column name="ID_ACCOUNT" not-null="true" />
+        </property>
+        <property name="type" type="string">
+            <column name="TYPE" length="45" not-null="true" />
+        </property>
+        <property name="date" type="timestamp">
+            <column name="DATE" length="19" not-null="true" />
+        </property>
+        <property name="amount" type="double">
+            <column name="AMOUNT" precision="22" scale="0" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

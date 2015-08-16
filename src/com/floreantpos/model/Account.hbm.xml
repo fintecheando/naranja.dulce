@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15/08/2015 08:56:39 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping package="com.floreantpos.model">
+  <class lazy="false" name="com.floreantpos.model.ActionHistory" table="ACTION_HISTORY">
+
+<hibernate-mapping package="com.floreantpos.model">
+    <class lazy="false" name="com.floreantpos.model.Account" table="ACCOUNT" >
+        <id name="id" type="int">
+            <column name="ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="balance" type="java.lang.Float">
+            <column name="BALANCE" precision="12" scale="0" />
+        </property>
+        <property name="idLastAccountMovement" type="string">
+            <column name="ID_LAST_ACCOUNT_MOVEMENT" length="45" />
+        </property>
+    </class>
+</hibernate-mapping>

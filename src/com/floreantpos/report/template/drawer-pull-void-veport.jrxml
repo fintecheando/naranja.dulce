@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.0.4.final using JasperReports Library version 6.0.4  -->
+<!-- 2015-05-09T02:31:41 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="DrawerPullVoidReport" pageWidth="226" pageHeight="60" columnWidth="226" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="6a2111a7-2dbe-4fad-9a11-452dbf7f3ca7">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Crosstab Data Text" hTextAlign="Center" hImageAlign="Center"/>
+	<subDataset name="Table Dataset 1" uuid="ecf10ed0-0139-4776-add3-2c8c39be62b3"/>
+	<parameter name="totalVoid" class="java.lang.Double" isForPrompting="false"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="amount" class="java.lang.Double">
+		<fieldDescription><![CDATA[amount]]></fieldDescription>
+	</field>
+	<field name="code" class="java.lang.Integer">
+		<fieldDescription><![CDATA[code]]></fieldDescription>
+	</field>
+	<field name="reason" class="java.lang.String">
+		<fieldDescription><![CDATA[reason]]></fieldDescription>
+	</field>
+	<field name="hast" class="java.lang.String">
+		<fieldDescription><![CDATA[hast]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="16" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="224" height="12" uuid="52d70035-6474-42d2-bd76-415d9c5143c1"/>
+				<box leftPadding="2" rightPadding="2"/>
+				<textElement textAlignment="Center">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[VOID/REFUNDS (WITHOUT TAX)]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="13" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="39" height="12" uuid="b7085b48-5791-4bdf-b023-caee15727a91"/>
+				<box leftPadding="2" rightPadding="2"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[CODE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="39" y="0" width="78" height="12" uuid="7abc4fa2-2be9-4e6f-b653-5dd09b35a686"/>
+				<box leftPadding="2" rightPadding="2"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[REASON]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="117" y="0" width="36" height="12" uuid="dcae6ab4-18ea-469d-b13c-63023ed08207"/>
+				<box leftPadding="2" rightPadding="2"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[WASTE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="156" y="0" width="68" height="12" uuid="cc280e37-54b2-4023-9cd3-da846bd6df95"/>
+				<box leftPadding="2" rightPadding="2"/>
+				<textElement textAlignment="Right">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[AMOUNT]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="12" width="226" height="1" uuid="46b8960f-46a2-4a8b-b467-3194c9cf0747"/>
+				<graphicElement>
+					<pen lineWidth="0.75"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="12" splitType="Stretch">
+			<textField isBlankWhenNull="true">
+				<reportElement x="156" y="0" width="68" height="12" uuid="de29585f-a012-4b4a-ae8f-abec01d9013b"/>
+				<box leftPadding="2" rightPadding="2"/>
+				<textElement textAlignment="Right">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{amount}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="0" y="0" width="39" height="12" uuid="c78f828e-981d-41c1-9706-9d1a441f058a"/>
+				<box leftPadding="2" rightPadding="2"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{code}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="39" y="0" width="78" height="12" uuid="4a355dd5-e137-4641-afc4-2a2df1c8a776"/>
+				<box leftPadding="2" rightPadding="2"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{reason}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="117" y="0" width="36" height="12" uuid="d8ef373b-404c-4e43-b3b5-6b613f329644"/>
+				<box leftPadding="2" rightPadding="2"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{hast}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="12" splitType="Stretch">
+			<staticText>
+				<reportElement x="114" y="0" width="39" height="12" uuid="e33f796f-8d9a-4043-b106-4d82b820e5b0"/>
+				<box leftPadding="2" rightPadding="2"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[TOTAL]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="156" y="0" width="68" height="12" uuid="3b290e3b-2c6a-46fc-aa60-bba2eb453707"/>
+				<box leftPadding="2" rightPadding="2"/>
+				<textElement textAlignment="Right">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{totalVoid}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="0" width="226" height="1" uuid="60fdf88b-55f8-47f8-8cf1-eec1d72e6fbb"/>
+				<graphicElement>
+					<pen lineWidth="0.75"/>
+				</graphicElement>
+			</line>
+		</band>
+	</summary>
+</jasperReport>
